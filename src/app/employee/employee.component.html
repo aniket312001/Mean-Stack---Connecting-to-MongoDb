@@ -1,0 +1,26 @@
+<div >
+    
+</div>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Position</td>
+            <td>Dept</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of allData">
+            <td>{{i.name}}</td>
+            <td>{{i.position}}</td>
+            <td>{{i.dept}}</td>
+            <td> 
+                <a [routerLink]="['','update',i._id]">Update</a>&nbsp;
+                <button (click)="delete(i._id)" >Delete</button>&nbsp;
+                <button (click)="deletebyname(i.name)" >DeleteByName</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

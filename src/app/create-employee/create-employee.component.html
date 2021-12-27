@@ -1,0 +1,18 @@
+<div class="myform" >
+    
+    
+    <form [formGroup]="formValue" (ngSubmit)="onSubmit()" >
+      
+        <input type="text"  id="" placeholder="Name" formControlName="name"><br>
+        
+        <input type="text"  id="" placeholder="position" formControlName="position"><br>
+       
+        <input type="text"  id="" placeholder="dept" formControlName="dept"><br>
+ 
+     
+
+        <button  type="submit"  [disabled]="!formValue.valid" >Submit</button>
+
+  
+    </form>
+</div>
